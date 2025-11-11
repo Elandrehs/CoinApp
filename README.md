@@ -55,9 +55,6 @@ Fui responsable de:
 ---
 
 ## 🚀 Cómo ejecutar el proyecto
-
-Luego abre 👉 http://localhost:4200
- en tu navegador.
  
 ```bash
 # Instalar dependencias
