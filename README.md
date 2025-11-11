@@ -5,6 +5,14 @@ La aplicación simula una **red social empresarial**, enfocada en la interacció
 
 ---
 
+![CoinApp Preview](./readme/coinapp_login.png)
+
+![CoinApp Preview](./readme/coinapp_feed.png)
+
+![CoinApp Preview](./readme/coinapp_profile.png)
+
+---
+
 ## ⚙️ Funcionalidades principales
 
 - 🔐 Registro e inicio de sesión de usuarios  
