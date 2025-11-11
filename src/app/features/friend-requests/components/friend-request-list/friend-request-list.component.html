@@ -1,0 +1,41 @@
+<div class="friend-request-container">
+  <div class="friend-request-card" *ngFor="let request of requests">
+    <app-avatar (click)="handleGoToProfile($event, request)"></app-avatar>
+
+    <div class="request-info" (click)="handleGoToProfile($event, request)">
+      <p class="username">
+        {{ type === 'received' ? request.userIdEmissor.username : request.userIdReceiver.username }}
+      </p>
+      <p class="email">
+        {{ type === 'received' ? request.userIdEmissor.email : request.userIdReceiver.email }}
+      </p>
+
+    </div>
+    <ng-container *ngIf="type === 'received'; else sentBlock">
+      <ng-container *ngIf="!request.accepted; else acceptedText">
+        <app-classic-button size="small" (click)="acceptRequest(request._id)">
+          {{ 'friendRequests.accept' | translate }}
+        </app-classic-button>
+      </ng-container>
+    </ng-container>
+
+    <ng-template #acceptedText>
+  <span class="status-text">
+    {{ 'friendRequests.status.alreadyAccepted' | translate }}
+  </span>
+    </ng-template>
+
+
+    <ng-template #sentBlock>
+      <span class="status-text">
+        {{
+          request.accepted
+            ? ('friendRequests.status.accepted' | translate)
+            : ('friendRequests.status.pending' | translate)
+        }}
+      </span>
+    </ng-template>
+  </div>
+
+  </div>
+

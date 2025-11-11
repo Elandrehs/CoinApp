@@ -1,0 +1,13 @@
+<div class="chat-input">
+  <app-icon-button type="image"></app-icon-button>
+
+  <input
+    [(ngModel)]="messageContent"
+    placeholder="Escribe un mensaje..."
+    class="input-field"
+    type="text"
+    (keydown.enter)="handleSend()"
+  />
+
+  <app-icon-button type="send" (click)="handleSend()"></app-icon-button>
+</div>

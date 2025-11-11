@@ -1,0 +1,27 @@
+.chat-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-secondary);
+  color: var(--color-pure2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* TOP */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--muted);
+  background-color: var(--color-secondary);
+}
+
+.user-info .username {
+  font-weight: bold;
+}
+
+.user-info .email {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

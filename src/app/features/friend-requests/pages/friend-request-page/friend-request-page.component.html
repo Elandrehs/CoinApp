@@ -1,0 +1,43 @@
+<div class="other-buttons">
+  <button
+    class="tab-button"
+    [class.active]="activeTab === 'received'"
+    (click)="setTab('received')"
+  >
+    {{ 'friendRequests.received' | translate }}
+  </button>
+  <button
+    class="tab-button"
+    [class.active]="activeTab === 'sent'"
+    (click)="setTab('sent')"
+  >
+    {{ 'friendRequests.sent' | translate }}
+  </button>
+  <div
+    class="underline"
+    [style.transform]="activeTab === 'received' ? 'translateX(12%)' : 'translateX(135%)'"
+  ></div>
+</div>
+<div class="tab-content">
+  <app-friend-request-list
+    *ngIf="activeTab === 'received'"
+    [type]="'received'"
+    [requests]="receivedRequests"
+    (accepted)="handleAccept($event)"
+  ></app-friend-request-list>
+
+  <app-friend-request-list
+    *ngIf="activeTab === 'sent'"
+    [type]="'sent'"
+    [requests]="sentRequests"
+  ></app-friend-request-list>
+
+  <div *ngIf="activeTab === 'sent' && sentRequests.length === 0">
+    <h2 class="empty-message">{{ 'friendRequests.empty.sent' | translate }}</h2>
+  </div>
+  <div *ngIf="activeTab === 'received' && receivedRequests.length === 0">
+    <h2 class="empty-message">{{ 'friendRequests.empty.received' | translate }}</h2>
+  </div>
+
+</div>
+

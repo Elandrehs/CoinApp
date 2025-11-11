@@ -1,0 +1,11 @@
+<div class="post-detail" *ngIf="post" >
+
+  <app-post-card
+    *ngIf="post"
+    [post]="post"
+    [likedByUser]="likedByUser"
+    (likeToggled)="handleToggleLike()" />
+
+  <app-comment-form (commentSubmitted)="handleSubmitComment($event)" />
+  <app-comment-list [comments]="comments" />
+</div>

@@ -1,0 +1,5 @@
+<div class="feed-page-container">
+  <app-post-form (postSubmitted)="onPostSubmit($event)" />
+  <app-post-list [posts]="posts" (likeToggled)="handleToggleLike($event)" />
+  />
+</div>

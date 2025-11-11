@@ -1,0 +1,40 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="email">{{ 'auth.emailLabel' | translate }}</label>
+    <div class="input-wrapper">
+      <input
+        id="email"
+        type="email"
+        [placeholder]="'auth.emailPlaceholder' | translate"
+        formControlName="email"
+      />
+      <div class="alert-error alert-error-right">
+        <div class="error-floating" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+          {{ 'auth.emailError' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">{{ 'auth.passwordLabel' | translate }}</label>
+    <div class="input-wrapper">
+      <input
+        id="password"
+        type="password"
+        [placeholder]="'auth.passwordPlaceholder' | translate"
+        formControlName="password"
+      />
+      <div class="alert-error alert-error-right">
+        <div class="error-floating" *ngIf="form.get('password')?.touched && form.get('password')?.invalid">
+          {{ 'auth.passwordError' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="form-submit-btn" type="submit">
+    {{ 'auth.login' | translate }}
+  </button>
+</form>

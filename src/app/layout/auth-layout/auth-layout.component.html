@@ -1,0 +1,27 @@
+<main class="auth-main-container">
+  <div class="logo-container" [ngClass]="currentView">
+      <!-- <img [src]="logoSrc" class="logo" alt="Logo" /> -->
+      <img src="/assets/img/logo-dark-mode.png" class="logo logo-dark" alt="Logo Dark" />
+  </div>
+  <!-- FORMULARIO -->
+  <div class="form-container">
+      <app-register-form *ngIf="currentView === 'register'" class="form-popup register-form" />
+      <app-login-form *ngIf="currentView === 'login'" class="form-popup login-form" />
+  </div>
+
+  <!-- BOTONES DE ACCESIBILIDAD -->
+  <div class="accessibility-buttons">
+    <app-theme-toggle/>
+    <app-language-switcher/>
+  </div>
+
+    <!-- BOTONES DE ACCESO -->
+    <div class="authentication-buttons">
+        <app-classic-button size="large" (click)="setView('register')">
+            {{ 'auth.register' | translate }}
+        </app-classic-button>
+        <app-classic-button size="large" (click)="setView('login')">
+            {{ 'auth.login' | translate }}
+        </app-classic-button>
+    </div>
+</main>

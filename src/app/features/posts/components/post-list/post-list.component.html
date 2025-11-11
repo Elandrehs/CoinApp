@@ -1,0 +1,34 @@
+<div class="posts-wrapper">
+  <div class="post-container" *ngFor="let post of posts">
+    <div (click)="handleGoToPost(post)" class="post-header">
+      <app-avatar (click)="handleGoToProfile($event, post)" />
+      <div (click)="handleGoToProfile($event, post)" class="post-info">
+        <p class="username">{{ post.author?.username || 'Usuario desconocido' }}</p>
+        <div class="metadata">
+          <span class="email">{{ post.author?.email || 'email@example.com' }}</span>
+          <span class="dot">•</span>
+          <span class="date">
+    {{ post.createdAt ? (post.createdAt | date: 'shortDate') : 'Fecha desconocida' }}
+  </span>
+        </div>
+      </div>
+    </div>
+
+    <div (click)="handleGoToPost(post)" class="post-content">
+      {{ post.content }}
+    </div>
+
+
+    <div class="post-footer" (click)="handleGoToPost(post)">
+      <div class="action-button like-btn" (click)="handleLikeClick($event, post)">
+        <app-icon-button type="heart"/>
+        <span>{{ post.likesCount ?? 0 }}</span>
+      </div>
+      <div class="action-button comment-btn" (click)="handleStopPropagation($event)">
+        <app-icon-button type="comment" />
+        <span>{{ post.commentsCount ?? 0 }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<div class="chat-card">
+  <app-avatar (click)="handleGoToProfile($event)"></app-avatar>
+  <div class="chat-info">
+    <div class="chat-header">
+      <span class="username">{{ username }}</span>
+      <span class="email">{{ email }}</span>
+      <span class="timestamp">{{ sentAt }}</span>
+    </div>
+    <div class="chat-message" [class.sent]="messageType === 'sent'">
+      {{ message }}
+    </div>
+  </div>
+</div>

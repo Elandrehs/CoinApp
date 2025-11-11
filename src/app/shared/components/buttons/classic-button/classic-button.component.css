@@ -1,0 +1,41 @@
+.submit {
+  font-weight: 500;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border: none;
+  outline: 3px var(--color-primary) solid;
+  outline-offset: -3px;
+  cursor: pointer;
+  transition: 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+.submit:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+/* Tamaños */
+.submit.small {
+  font-size: 15px;
+  padding: 8px 10px;
+  height: 35px;
+  border-radius: 6px;
+}
+
+.submit.medium {
+  font-size: 16px;
+  padding: 8px 14px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.submit.large {
+  font-size: 20px;
+  padding: 8px 16px;
+  height: 50px;
+  border-radius: 10px;
+}

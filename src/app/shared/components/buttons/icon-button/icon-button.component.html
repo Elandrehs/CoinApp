@@ -1,0 +1,85 @@
+<!-- ❤️ Heart Button -->
+<div *ngIf="type === 'heart'" class="like-btn">
+  <div class="icon-wrapper">
+    <div class="heart-container" [attr.title]="'Like'">
+      <input
+        type="checkbox"
+        class="checkbox"
+        [id]="id"
+        [checked]="liked"
+        tabindex="-1"
+      />
+      <label class="heart" [for]="id"></label>
+      <div class="svg-container">
+        <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+          </path>
+        </svg>
+        <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+          </path>
+        </svg>
+        <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,10 20,20"></polygon>
+          <polygon points="10,50 20,50"></polygon>
+          <polygon points="20,80 30,70"></polygon>
+          <polygon points="90,10 80,20"></polygon>
+          <polygon points="90,50 80,50"></polygon>
+          <polygon points="80,80 70,70"></polygon>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 💬 Comment Button -->
+<div *ngIf="type === 'comment'" class="comment-btn">
+  <div class="icon-wrapper" [attr.title]="'Comentar'">
+    <svg
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke="currentColor"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      height="23"
+      width="23"
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-8 hover:scale-125 duration-200 hover:stroke-blue-500"
+      fill="none"
+    >
+      <path fill="none" d="M0 0h24v24H0z" stroke="none"></path>
+      <path d="M8 9h8"></path>
+      <path d="M8 13h6"></path>
+      <path
+        d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"
+      ></path>
+    </svg>
+  </div>
+</div>
+
+<!-- 🖼️ Image Button -->
+<div *ngIf="type === 'image'">
+  <button class="icon-button" [attr.title]="'Agregar imagen'">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--color-secondary)">
+      <path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2ZM8 11l2.5 3.01L14 12l4 5H6l2-3Z"/>
+    </svg>
+  </button>
+</div>
+
+<div *ngIf="type === 'send'">
+  <button class="icon-button" [attr.title]="'Enviar Mensaje'">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="var(--color-secondary)">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+    </svg>
+  </button>
+</div>
+
+
+<div *ngIf="type === 'goback'">
+  <button class="icon-button b">
+    <svg class="back-icon" viewBox="0 0 24 24" fill="var(--color-secondary)">
+      <path fill="var(--color-secondary)" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+</div>

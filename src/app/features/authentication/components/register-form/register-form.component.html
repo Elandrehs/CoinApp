@@ -1,0 +1,91 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="username">{{ 'auth.usernameLabel' | translate }}</label>
+    <div class="input-wrapper">
+      <input
+        id="username"
+        type="text"
+        [placeholder]="'auth.usernamePlaceholder' | translate"
+        formControlName="username"
+      />
+      <div class="alert-error alert-error-left">
+        <div class="error-floating" *ngIf="form.get('username')?.touched && form.get('username')?.invalid">
+          {{ 'auth.usernameError' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">{{ 'auth.emailLabel' | translate }}</label>
+    <div class="input-wrapper">
+      <input
+        id="email"
+        type="email"
+        [placeholder]="'auth.emailPlaceholder' | translate"
+        formControlName="email"
+      />
+      <div class="alert-error alert-error-left">
+        <div class="error-floating" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+          {{ 'auth.emailError' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">{{ 'auth.passwordLabel' | translate }}</label>
+    <div class="input-wrapper">
+      <input
+        id="password"
+        type="password"
+        [placeholder]="'auth.passwordPlaceholder' | translate"
+        formControlName="password"
+      />
+      <div class="alert-error alert-error-left">
+        <div class="error-floating" *ngIf="form.get('password')?.touched && form.get('password')?.invalid">
+          {{ 'auth.passwordError' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">{{ 'auth.phoneLabel' | translate }}</label>
+    <div class="input-wrapper">
+      <input
+        id="phone"
+        type="tel"
+        [placeholder]="'auth.phonePlaceholder' | translate"
+        formControlName="phone"
+      />
+      <div class="alert-error alert-error-left">
+        <div class="error-floating" *ngIf="form.get('phone')?.touched && form.get('phone')?.invalid">
+          {{ 'auth.phoneError' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="rucEnterprise">{{ 'auth.rucLabel' | translate }}</label>
+    <div class="input-wrapper">
+      <input
+        id="rucEnterprise"
+        type="text"
+        [placeholder]="'auth.rucPlaceholder' | translate"
+        formControlName="rucEnterprise"
+      />
+      <div class="alert-error alert-error-left">
+        <div class="error-floating" *ngIf="form.get('rucEnterprise')?.touched && form.get('rucEnterprise')?.invalid">
+          {{ 'auth.rucError' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="form-submit-btn" type="submit" [disabled]="submitting">
+    {{ submitting ? ('auth.registering' | translate) : ('auth.register' | translate) }}
+  </button>
+</form>

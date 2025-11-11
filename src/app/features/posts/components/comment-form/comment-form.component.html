@@ -1,0 +1,18 @@
+<div class="comment-form-container">
+  <app-avatar/>
+  <div class="form-area">
+    <textarea
+      class="comment-input"
+      [formControl]="contentControl"
+      [placeholder]="'comment.placeholder' | translate"
+      rows="3"
+    ></textarea>
+
+    <div class="comment-actions">
+      <app-icon-button type="image"/>
+      <app-classic-button [size]="'small'" (click)="submitComment()">
+        {{ 'comment.submit' | translate }}
+      </app-classic-button>
+    </div>
+  </div>
+</div>

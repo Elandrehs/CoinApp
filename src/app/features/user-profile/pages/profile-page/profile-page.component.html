@@ -1,0 +1,55 @@
+<app-profile-view
+  *ngIf="user"
+  [user]="user"
+  [isOwnProfile]="isOwnProfile"
+  [postsCount]="posts.length"
+  (addFriend)="handleAddFriendA()"
+/>
+
+<div class="other-container">
+  <div class="other-buttons">
+    <button
+      class="tab-button"
+      [class.active]="activeTab === 'posts'"
+      (click)="setTab('posts')"
+    >
+      {{ 'profile.posts' | translate }}
+    </button>
+    <button
+      class="tab-button"
+      [class.active]="activeTab === 'friends'"
+      (click)="setTab('friends')"
+    >
+      {{ 'profile.friends' | translate }}
+    </button>
+
+    <div
+      class="underline"
+      [style.transform]="activeTab === 'posts' ? 'translateX(0%)' : 'translateX(100%)'"
+    ></div>
+  </div>
+
+  <div class="tab-content">
+    <div *ngIf="activeTab === 'posts'">
+      <app-post-list
+        [posts]="posts"
+        (likeToggled)="handleToggleLike($event)"
+      ></app-post-list>
+
+    </div>
+    <div *ngIf="activeTab === 'friends'">
+      <app-friend-list
+        *ngIf="friends.length > 0"
+        [friends]="friends"
+        [addedFriends]="addedFriends"
+        (addFriend)="handleAddFriendB($event)"
+      ></app-friend-list>
+
+      <h2 *ngIf="friends.length === 0" class="no-friends-message">
+        {{'friends.noFriendsB' | translate }}
+      </h2>
+
+    </div>
+  </div>
+</div>
+

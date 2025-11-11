@@ -1,0 +1,52 @@
+.container {
+  width: 50px;
+}
+.theme {
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  position: relative;
+  cursor: pointer;
+  z-index: 9;
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  transition: background-color 0.25s linear;
+  border-radius: 5px;
+}
+
+.theme:hover {
+  background-color: var(--muted);
+}
+
+.theme span {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0.125rem;
+  border-radius: 9999px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Visibilidad condicional */
+.mode:checked ~ .theme span.light,
+.mode:not(:checked) ~ .theme span.dark {
+  display: none;
+}
+.mode:not(:checked) ~ .theme span.light,
+.mode:checked ~ .theme span.dark {
+  display: flex;
+}
+
+
+.theme svg {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke: currentColor;
+  fill: none;
+  height: 22px;
+  width: 22px;
+}

@@ -1,0 +1,37 @@
+<div class="post-card">
+  <div class="post-header">
+    <app-avatar (click)="handleGoToProfile($event, post)" />
+    <div class="user-info" (click)="handleGoToProfile($event, post)">
+      <p class="username">{{ post?.author?.username || 'Usuario' }}</p>
+      <p class="email">{{ post?.author?.email || 'email@example.com' }}</p>
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{ post?.content || 'Sin contenido' }}
+  </div>
+
+  <div class="post-image" *ngIf="post?.images?.length">
+    <img [src]="post.images[0]" alt="Post image" />
+  </div>
+
+  <div class="post-date">
+    {{ post?.createdAt ? (post.createdAt | date: 'short') : 'Sin fecha' }}
+  </div>
+
+  <div class="post-actions">
+    <div class="action-button like-btn" (click)="handleLikeClick()">
+        <app-icon-button
+        type="heart"
+        [liked]="likedByUser"
+        />
+
+      <span>{{ post?.likesCount ?? 0 }}</span>
+    </div>
+
+    <div class="action-button comment-btn">
+      <app-icon-button type="comment" />
+      <span>{{ post?.commentsCount ?? 0 }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="sidebar-wrapper">
+  <input class="inp" type="checkbox" id="sidebar-toggle" />
+
+  <!-- Solo este label activa/desactiva el checkbox -->
+  <label class="main" for="sidebar-toggle">
+    <div class="bar">
+      <span class="top bar-list"></span>
+      <span class="middle bar-list"></span>
+      <span class="bottom bar-list"></span>
+    </div>
+  </label>
+
+  <!-- El menú ya no está dentro del label, por lo tanto no cierra al hacer clic -->
+  <section class="menu-container">
+    <div class="menu-list" >
+      <a class="sidebar-route" (click)="handleGoToProfile($event)">{{ 'sidebar.view' | translate }}</a>
+    </div>
+    <div class="menu-list" >
+      <a class="sidebar-route" (click)="handleGoToProfile($event)">{{ 'sidebar.edit' | translate }}</a>
+    </div>
+
+    <div class="menu-list menu-extra">
+      <div class="theme-toggle-container">
+        <app-theme-toggle/>
+      </div>
+    </div>
+    <div class="menu-list menu-extra">
+      <app-language-switcher/>
+    </div>
+    <div class="menu-list">
+      <a class="sidebar-route" (click)="handleLogOut($event)">{{ 'sidebar.logout' | translate }}</a>
+    </div>
+  </section>
+</div>

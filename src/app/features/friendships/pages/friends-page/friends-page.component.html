@@ -1,0 +1,8 @@
+<app-friend-list
+  *ngIf="friends.length > 0"
+  [friends]="friends"
+  [addedFriends]="addedFriends"
+></app-friend-list>
+<h2 *ngIf="friends.length === 0" class="no-friends-message">
+  {{'friends.noFriends' | translate }}
+</h2>

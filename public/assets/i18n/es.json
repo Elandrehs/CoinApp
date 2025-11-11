@@ -1,0 +1,78 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "feed": "Feed",
+    "friends": "Amigos",
+    "requests": "Solicitudes"
+  },
+  "sidebar": {
+    "view": "Ver perfil",
+    "edit": "Editar perfil",
+    "logout": "Cerrar sesión"
+  },
+  "auth": {
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "Ingresa tu correo",
+    "emailError": "Correo inválido",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Ingresa tu contraseña",
+    "passwordError": "La contraseña es obligatoria",
+    "login": "Logearse",
+    "usernameLabel": "Nombre de usuario",
+    "usernamePlaceholder": "Ingresa tu nombre de usuario",
+    "usernameError": "El nombre de usuario es obligatorio",
+    "phoneLabel": "Teléfono",
+    "phonePlaceholder": "987654321",
+    "phoneError": "Teléfono inválido",
+    "rucLabel": "RUC de empresa",
+    "rucPlaceholder": "123456789",
+    "rucError": "RUC inválido",
+    "register": "Registrarse",
+    "registering": "Registrando…"
+  },
+  "welcome": {
+    "title": "¡Bienvenido!",
+    "message": "Usa la barra superior para acceder a las funcionalidades de la aplicación."
+  },
+  "profile": {
+    "username": "Nombre de usuario",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "addFriend": "Agregar a amigos",
+    "edit": "Editar",
+    "posts": "Publicaciones",
+    "friends": "Amigos",
+    "alreadyAdded": "Ya agregado"
+  },
+  "comment": {
+    "placeholder": "Comenta tu respuesta",
+    "submit": "Comentar"
+  },
+  "post": {
+    "submit": "Postear",
+    "placeholder": {
+      "thinking": "¿Qué estás pensando?",
+      "feeling": "¿Cómo te sientes hoy?",
+      "happening": "¿Qué está pasando?",
+      "express": "Exprésate aquí..."
+    }
+  },
+  "friendRequests": {
+    "received": "Recibidas",
+    "sent": "Enviadas",
+    "accept": "Aceptar",
+    "status": {
+      "accepted": "Aceptada",
+      "pending": "Pendiente",
+      "alreadyAccepted": "Ya aceptaste esta solicitud"
+    },
+    "empty": {
+      "sent": "No has enviado ninguna solicitud de amistad.",
+      "received": "No has recibido ninguna solicitud de amistad."
+    }
+  },
+  "friends": {
+    "noFriends": "No amigos por el momento :( envia una solicitud!!!",
+    "noFriendsB": "Sin amigos por el momento :("
+  }
+}

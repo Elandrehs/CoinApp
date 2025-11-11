@@ -1,0 +1,17 @@
+<div class="post-form-container">
+  <app-avatar/>
+  <div class="form-content">
+    <textarea
+      [formControl]="content"
+      [placeholder]="selectedPlaceholder | translate"
+      rows="3">
+    </textarea>
+
+    <div class="form-footer">
+      <app-icon-button type="image"/>
+      <app-classic-button size="small" (click)="onSubmit()">
+        {{ 'post.submit' | translate }}
+      </app-classic-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.background-image-section {
+  height: 200px;
+  background-image: url('https://picsum.photos/1200/300');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.bottom-section {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-pure2);
+  border-radius: 0 0 10px 10px;
+  transform: translateY(-40px);
+}
+
+.profile-image {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  background-image: url('https://picsum.photos/100');
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border: 3px solid var(--color-pure2);
+}
+
+.info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-a{
+  display: flex;
+  gap: 1rem;
+}
+
+.info-container p {
+  margin: 4px 0;
+}
+
+.interact-buttons {
+ display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.information{
+  display: flex;
+  gap: 0.2rem;
+}

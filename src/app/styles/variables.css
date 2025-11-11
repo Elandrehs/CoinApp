@@ -1,0 +1,21 @@
+:root.light-mode {
+  --color-primary: #E9D9C7;
+  --color-secondary: #20201A;
+  --color-pure: #000;
+  --color-pure2:#fff;
+  --muted: #C1B6AE;
+
+  background-color: var(--color-secondary);
+  color: var(--color-pure);
+}
+
+:root.dark-mode {
+  --color-primary: #20201A;
+  --color-secondary: #E9D9C7;
+  --color-pure: #fff;
+  --color-pure2: #000;
+  --muted: #7e7671;
+
+  background-color: var(--color-secondary);
+  color: var(--color-pure);
+}

@@ -1,0 +1,22 @@
+<div class="friend-list-container">
+  <div class="friend-card" *ngFor="let friend of friends">
+    <app-avatar (click)="handleGoToProfile($event, friend)"></app-avatar>
+
+    <div class="friend-info" (click)="handleGoToProfile($event, friend)">
+      <p class="username">{{ friend.username }}</p>
+      <p class="email">{{ friend.email }}</p>
+    </div>
+
+    <ng-container *ngIf="!isAlreadyFriend(friend); else addedBlock">
+      <app-classic-button size="small" (click)="addFriend.emit(friend._id)">
+        {{ 'profile.addFriend' | translate }}
+      </app-classic-button>
+    </ng-container>
+
+    <ng-template #addedBlock>
+      <div class="added-info">
+        ✅ {{ 'profile.alreadyAdded' | translate }}
+      </div>
+    </ng-template>
+  </div>
+</div>

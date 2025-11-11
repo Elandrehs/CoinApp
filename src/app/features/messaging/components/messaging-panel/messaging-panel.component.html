@@ -1,0 +1,59 @@
+<div class="messaging-panel-container">
+  <div class="messaging-panel-wrapper">
+    <input class="input" type="checkbox" id="messaging-panel-toggle" />
+
+    <label class="press" for="messaging-panel-toggle">
+      <ng-container *ngIf="!toggleChecked()">
+        <!-- Icono de mensaje cerrado -->
+        <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 13l-8-5v10h16V8z"/><path fill="currentColor" d="M4 6l8 5 8-5H4z"/></svg>
+      </ng-container>
+      <ng-container *ngIf="toggleChecked()">
+        <!-- Icono de mensaje abierto -->
+        <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3H5a2 2 0 00-2 2v14l4-4h12a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg>
+      </ng-container>
+    </label>
+
+    <!-- Contenedor de mensajería -->
+    <section class="messaging-container">
+      <!-- Mostrar lista de chats solo si NO hay uno seleccionado -->
+      <ng-container *ngIf="!selectedChat">
+        <div
+          class="chat-click-wrapper"
+          *ngFor="let chat of chats"
+          (click)="handleChatClick(chat)"
+        >
+          <app-chat-list
+            [username]="chat.user.username"
+            [email]="chat.user.email"
+            [message]="chat.lastMessage.content"
+            [messageType]="chat.lastMessage.sender._id === currentUser._id ? 'sent' : 'received'"
+            [sentAt]="chat.lastMessage.sentAt"
+          ></app-chat-list>
+
+        </div>
+      </ng-container>
+
+      <!-- Mostrar solo el chat seleccionado -->
+      <ng-container *ngIf="selectedChat">
+        <app-chat-box
+          *ngIf="selectedChat"
+          [currentUser]="currentUser"
+          [conversation]="selectedChat"
+          [onBack]="handleBack"
+        >
+          <div class="chat-messages">
+            <app-message-bubble
+              *ngFor="let msg of selectedChat.messages"
+              [text]="msg.content"
+              [sentAt]="msg.sentAt"
+              [type]="msg.sender._id === currentUser._id ? 'sent' : 'received'"
+            ></app-message-bubble>
+          </div>
+
+          <app-message-form (sendMessage)="handleSendMessage($event)"></app-message-form>
+        </app-chat-box>
+
+      </ng-container>
+    </section>
+  </div>
+</div>

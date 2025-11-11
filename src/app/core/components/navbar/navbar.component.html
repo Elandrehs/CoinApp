@@ -1,0 +1,35 @@
+<div class="nav-bar">
+
+  <div class="logo-container">
+    <!-- <img [src]="logoSrc" class="logo" alt="Logo" /> -->
+    <img src="/assets/img/logo-dark-mode.png" class="logo logo-dark" alt="Logo Dark" />
+  </div>
+
+  <div class="wrap" >
+    <input hidden class="rd-0" name="radio" id="rd-0" type="radio" checked />
+    <label style="--index: 0;" class="label" for="rd-0" (click)="navigate('/main')">
+      <span>{{ 'navbar.home' | translate }}</span>
+    </label>
+
+    <input hidden class="rd-1" name="radio" id="rd-1" type="radio" />
+    <label style="--index: 1;" class="label" for="rd-1" (click)="navigate('/main/feed')">
+      <span>{{ 'navbar.feed' | translate }}</span>
+    </label>
+
+    <input hidden class="rd-2" name="radio" id="rd-2" type="radio" />
+    <label style="--index: 2;" class="label" for="rd-2" (click)="navigateToFriends()">
+      <span>{{ 'navbar.friends' | translate }}</span>
+    </label>
+
+    <input hidden class="rd-3" name="radio" id="rd-3" type="radio" />
+    <label style="--index: 3;" class="label" for="rd-3" (click)="navigate('/main/requests')">
+      <span>{{ 'navbar.requests' | translate }}</span>
+    </label>
+
+    <div class="bar"></div>
+    <div class="slidebar"></div>
+  </div>
+
+  <app-sidebar/>
+
+</div>

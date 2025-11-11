@@ -1,0 +1,9 @@
+<app-navbar/>
+<main class="main-container">
+  <div class="welcome-message" *ngIf="isMainPage">
+    <h1>{{ 'welcome.title' | translate }}</h1>
+    <p>{{ 'welcome.message' | translate }}</p>
+  </div>
+  <router-outlet/>
+  <app-messaging-panel/>
+</main>

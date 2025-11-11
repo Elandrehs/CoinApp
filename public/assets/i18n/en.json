@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "home": "Home",
+    "feed": "Feed",
+    "friends": "Friends",
+    "requests": "Requests"
+  },
+  "sidebar": {
+    "view": "View Profile",
+    "edit": "Edit Profile",
+    "logout": "Log Out"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "emailError": "Invalid email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordError": "Password is required",
+    "login": "Log in",
+    "usernameLabel": "Username",
+    "usernamePlaceholder": "Enter your username",
+    "usernameError": "Username is required",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "987654321",
+    "phoneError": "Invalid phone",
+    "rucLabel": "RUC Enterprise",
+    "rucPlaceholder": "123456789",
+    "rucError": "Invalid RUC",
+    "register": "Register",
+    "registering": "Registering…"
+  },
+  "welcome": {
+    "title": "Welcome!",
+    "message": "Use the top bar to access the application features."
+  },
+  "profile": {
+    "username": "Username",
+    "email": "Email",
+    "phone": "Phone",
+    "addFriend": "Add to friends",
+    "edit": "Edit",
+    "posts": "Posts",
+    "friends": "Friends",
+    "alreadyAdded": "Already added"
+  },
+  "comment": {
+    "placeholder": "Write your comment",
+    "submit": "Comment"
+  },
+  "post": {
+    "submit": "Post",
+    "placeholder": {
+      "thinking": "What are you thinking?",
+      "feeling": "How are you feeling today?",
+      "happening": "What's happening?",
+      "express": "Express yourself here..."
+    }
+  },
+  "friendRequests": {
+    "received": "Received",
+    "sent": "Sent",
+    "accept": "Accept",
+    "status": {
+      "accepted": "Accepted",
+      "alreadyAccepted": "You have already accepted this request",
+      "pending": "Pending"
+    },
+    "empty": {
+      "sent": "You haven't sent any friend requests.",
+      "received": "You haven't received any friend requests."
+    }
+  },
+  "friends": {
+    "noFriends": "No friends at the moment :( send a request!!!",
+    "noFriendsB": "No friends at the moment :("
+
+  }
+}

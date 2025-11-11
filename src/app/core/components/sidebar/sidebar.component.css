@@ -1,0 +1,175 @@
+.inp {
+  display: none;
+}
+
+/* Tamaño inicial del sidebar */
+.sidebar-wrapper {
+  width: 3rem;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+/* Expandir el sidebar cuando está abierto */
+.sidebar-wrapper:has(.inp:checked) {
+  width: 12rem;
+}
+
+/* El botón hamburguesa */
+.main {
+  font-weight: 800;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  padding: 12px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  position: relative;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Icono hamburguesa */
+.bar {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 20px;
+  height: auto;
+}
+
+/* Estilo de las barras */
+.bar-list {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 50px;
+  background-color: var(--color-secondary);
+  transition: all 0.4s;
+  position: relative;
+  --transform: -25%;
+}
+
+/* Cambiar a X */
+.inp:checked + label .bar > .top {
+  transform-origin: top right;
+  transform: translateY(var(--transform)) rotate(-45deg);
+}
+
+.inp:checked + label .bar > .middle {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.inp:checked + label .bar > .bottom {
+  transform-origin: bottom right;
+  transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
+}
+
+/* Menú desplegable */
+.menu-container {
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 130%;
+  overflow: hidden;
+  clip-path: inset(100% 50% 0% 50% round 10px); /* Oculto por defecto */
+  transition: all 0.4s;
+  z-index: 1001;
+}
+
+/* Mostrar el menú cuando el input está activo */
+.inp:checked ~ .menu-container {
+  clip-path: inset(0% 0% 0% 0% round 10px);
+}
+
+/* Elementos del menú */
+.menu-list {
+  --delay: 0.4s;
+  --trdelay: 0.15s;
+  padding: 10px 10px;
+  border-radius: inherit;
+  transition: background-color 0.2s 0s;
+  position: relative;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.menu-extra{
+  display: flex;
+  justify-content: center;
+}
+
+.theme-toggle-container{
+  width: 5rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+}
+
+.menu-list::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 95%;
+}
+
+.menu-list:hover {
+  background-color: var(--muted);
+}
+
+.menu-list:active {
+  color: var(--color-pure);
+}
+
+.sidebar-route {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-extra:hover {
+  background-color: var(--color-primary);
+  cursor: default;
+}
+/* Mostrar elementos animados */
+.inp:checked ~ .menu-container .menu-list {
+  transform: translateY(0);
+  opacity: 1;
+}
+.inp:checked ~ .menu-container .menu-list:nth-child(1) {
+  transition: transform 0.4s var(--delay), opacity 0.4s var(--delay);
+}
+.inp:checked ~ .menu-container .menu-list:nth-child(2) {
+  transition: transform 0.4s calc(var(--delay) + var(--trdelay)),
+  opacity 0.4s calc(var(--delay) + var(--trdelay));
+}
+.inp:checked ~ .menu-container .menu-list:nth-child(3) {
+  transition: transform 0.4s calc(var(--delay) + var(--trdelay) * 2),
+  opacity 0.4s calc(var(--delay) + var(--trdelay) * 2);
+}
+.inp:checked ~ .menu-container .menu-list:nth-child(4) {
+  transition: transform 0.4s calc(var(--delay) + var(--trdelay) * 3),
+  opacity 0.4s calc(var(--delay) + var(--trdelay) * 3);
+}
+.inp:checked ~ .menu-container .menu-list:nth-child(5) {
+  transition: transform 0.4s calc(var(--delay) + var(--trdelay) * 4),
+  opacity 0.4s calc(var(--delay) + var(--trdelay) * 4);
+}
+
+.sidebar-route {
+  cursor: pointer;
+}

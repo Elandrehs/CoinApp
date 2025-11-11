@@ -1,0 +1,15 @@
+<div class="chat-box-wrapper">
+  <!-- Topbar -->
+  <div class="chat-header">
+    <app-icon-button type="goback" (click)="onBack()"></app-icon-button>
+    <div class="user-info">
+      <div class="username">{{ conversation.user.username }}</div>
+      <div class="email">{{ conversation.user.email }}</div>
+    </div>
+  </div>
+<div class="wasa">
+  <!-- Mensajes dinámicos con proyección -->
+  <ng-content></ng-content>
+</div>
+
+</div>

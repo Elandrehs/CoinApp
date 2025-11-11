@@ -1,0 +1,21 @@
+.message {
+  max-width: 70%;
+  padding: 0.6rem 1rem;
+  background-color: var(--muted);
+  border-radius: 15px;
+  align-self: flex-start;
+  color: var(--color-pure2);
+}
+
+.message.sent {
+  background-color: var(--color-primary);
+  align-self: flex-end;
+  color: var(--color-secondary);
+}
+
+.timestamp {
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  text-align: right;
+}

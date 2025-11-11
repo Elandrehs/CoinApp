@@ -1,0 +1,27 @@
+<div class="comment-wrapper">
+  <div class="comment-container" *ngFor="let comment of comments">
+    <div class="comment-header">
+      <app-avatar (click)="handleGoToProfile($event, comment)" />
+      <div class="comment-info" (click)="handleGoToProfile($event, comment)">
+        <p class="username">{{ comment.userId.username || 'Usuario' }}</p>
+        <div class="metadata">
+          <span class="email">{{ comment.userId.email || 'email@example.com' }}</span>
+          <span class="dot">•</span>
+          <span class="date">{{ comment.createdAt | date: 'shortDate' }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-content">
+      {{ comment.content }}
+    </div>
+
+    <div class="comment-footer">
+      <div class="action-button like-btn">
+        <app-icon-button type="heart" />
+        <span>0</span>
+      </div>
+    </div>
+  </div>
+</div>
+

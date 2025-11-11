@@ -1,0 +1,31 @@
+.friend-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.friend-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}
+
+.friend-info {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.friend-info .username {
+  font-weight: 600;
+  color: var(--color-pure2);
+  margin: 0;
+}
+
+.friend-info .email {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 2px 0 0;
+}
