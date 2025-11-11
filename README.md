@@ -5,11 +5,11 @@ La aplicación simula una **red social empresarial**, enfocada en la interacció
 
 ---
 
-![CoinApp Preview](./readme/coinapp_login.png)
+![CoinApp Preview](public/assets/readme/coinapp_login.png)
 
-![CoinApp Preview](./readme/coinapp_feed.png)
+![CoinApp Preview](public/assets/readme/coinapp_feed.png)
 
-![CoinApp Preview](./readme/coinapp_profile.png)
+![CoinApp Preview](public/assets/readme/coinapp_profile.png)
 
 ---
 
