@@ -1,59 +1,69 @@
-# Coinapp
+# 🪙 One Coin — Academic Networking Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+**One Coin** es un proyecto académico desarrollado para el curso de **Sistemas Operativos**, centrado en el despliegue de máquinas virtuales y la práctica del trabajo en equipo con un entorno cliente-servidor.  
+La aplicación simula una **red social empresarial**, enfocada en la interacción entre usuarios mediante publicaciones, solicitudes de amistad y mensajería.
 
-## Development server
+---
 
-To start a local development server, run:
+## ⚙️ Funcionalidades principales
 
+- 🔐 Registro e inicio de sesión de usuarios  
+- 📝 Creación y visualización de publicaciones  
+- 🤝 Sistema de amistades (enviar y aceptar solicitudes)  
+- ❤️ Reacciones y comentarios en publicaciones públicas  
+- 👤 Visualización de perfiles de usuario  
+- 💬 Chat entre usuarios *(funcionalidad aún en mejora)*  
+- 🌗 Cambio de tema (modo claro/oscuro)  
+- 🌍 Internacionalización **(Español / Inglés)**
+
+---
+
+## 🧠 Rol y aprendizaje
+
+**Rol:**  
+Fui responsable de:
+- El **diseño y desarrollo completo del frontend** en Angular  
+- La **definición de endpoints** y el **flujo de interacción** con el backend  
+- La **comunicación con el equipo** (3 integrantes) encargado del backend, base de datos y despliegue  
+- La **arquitectura de componentes**, diseño visual y conexión con la API  
+
+**Aprendizajes clave:**
+- Arquitectura front-end moderna (Angular)  
+- Diseño UI/UX y estructuración de componentes  
+- Internacionalización y theming  
+- Trabajo colaborativo entre frontend y backend  
+
+---
+
+## 🧩 Tecnologías utilizadas
+
+- **Angular 18+**
+- **TypeScript**
+- **HTML5 / CSS3 / SCSS**
+- **Firebase** *(configuración del proyecto)*
+- **JSON Server** *(para pruebas locales)*
+- **Git / GitHub**
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+Luego abre 👉 http://localhost:4200
+ en tu navegador.
+ 
 ```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar la aplicación en modo desarrollo
 ng serve
 ```
+Luego abre 👉 [http://localhost:4200](http://localhost:4200) en tu navegador.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+> ⚠️ El backend original ya no está desplegado, por lo que las funcionalidades de red social no están disponibles actualmente.
 
-## Code scaffolding
+## 👨‍💻 Autor
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Victor Cruz
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Estudiante de Ingeniería de Software
