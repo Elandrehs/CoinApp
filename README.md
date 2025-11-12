@@ -47,7 +47,7 @@ Fui responsable de:
 
 - **Angular 18+**
 - **TypeScript**
-- **HTML5 / CSS3 / SCSS**
+- **HTML5 / CSS3**
 - **Firebase** *(configuración del proyecto)*
 - **JSON Server** *(para pruebas locales)*
 - **Git / GitHub**
